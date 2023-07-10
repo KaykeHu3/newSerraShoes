@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const LogoContainer = styled.p`
     color: #FFFFFF;
     font-size: 36px;
+    position: absolute;
+    left: 40px;
+    top: 8px;
 `
 
 const Strong = styled.strong`
@@ -11,6 +15,6 @@ const Strong = styled.strong`
 
 export default function Logo () {
     return(
-        <LogoContainer><Strong>Só</Strong>Calçados</LogoContainer>
+        <Link to="/"><LogoContainer><Strong>Só</Strong>Calçados</LogoContainer></Link>
     )
 }
