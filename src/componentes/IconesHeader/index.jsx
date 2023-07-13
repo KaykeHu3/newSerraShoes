@@ -1,7 +1,7 @@
 import sacola from '../../imagens/sacola.svg'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-import BotaoContainer from '../LoginButton'
+import BotaoContainer from '../ButtonSingInUp'
 
 const Icones = styled.ul`
     display: flex;
