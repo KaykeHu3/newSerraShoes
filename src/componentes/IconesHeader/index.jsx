@@ -1,29 +1,31 @@
 import sacola from '../../imagens/sacola.svg'
-import user from '../../imagens/user.svg'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
+import BotaoContainer from '../ButtonSingInUp'
 
 const Icones = styled.ul`
     display: flex;
     align-items: center;
-    position: absolute;
-    right: 20px;
-    height: 70px; 
     cursor: pointer;
+    position: absolute;
+    right: 35px;
+    top: 16px;
 `
 
 const Icone = styled.li`
     margin-right: 40px;
-    width: 25px;
+    width: 30px;
 `
-
-const icones = [sacola, user]
 
 export default function IconesHeader() {
     return(
         <Icones>
-            {icones.map((icone) => (
-                <Icone><img src={icone} alt="Icone"></img></Icone>
-            ))}
+            <Icone>
+                <Link><img src={sacola} alt='Icone Sacola'/></Link>
+            </Icone>
+            <Icone>
+                <Link to={"login"} style={{textDecoration: "none"}}><BotaoContainer>Login</BotaoContainer></Link>
+            </Icone>
         </Icones>
     )
 }

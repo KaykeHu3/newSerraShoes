@@ -1,39 +1,82 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import Carousel from 'react-bootstrap/Carousel'
-import { CarouselItem } from 'react-bootstrap';
-import styled from 'styled-components'
+import React from "react";
+import styled from 'styled-components';
+import tenis from '../../imagens/CarouselProduct/imagem2.jpg';
 
-const Roladinha = styled.div`
-    color: #FFF;
-    background-color: #000;
-    display: block;
+const CarrosselContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 700;
-    height: 700;
-    font-size: 76px;
-    padding: 30;
+    margin-bottom: 30px;
+`
+
+const Carousel = styled.div`
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    width: 900px;
+    height: 150px;
+`
+
+const ItensCarousel = styled.div`
+    display: flex;
+    padding: 20px;
+`
+
+const ImagemProduto = styled.img`
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
 `
 
 export default function Carrossel () {
     return(
-        <Roladinha>
+        <>
+        <CarrosselContainer>
             <Carousel>
-                <CarouselItem>
-                    <p>Rola</p>
-                </CarouselItem>
-                <CarouselItem>
-                    <p>Pingola</p>
-                </CarouselItem>
-                <CarouselItem>
-                    <p>Jaca</p>
-                </CarouselItem>
-                <CarouselItem>
-                    <p>Piru</p>
-                </CarouselItem>
-                <CarouselItem>
-                    <p>Kleber</p>
-                </CarouselItem>
+                    <ItensCarousel>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                        <ImagemProduto src={tenis} alt="Tênis"/>
+                    </ItensCarousel>
             </Carousel>
-        </Roladinha>
+        </CarrosselContainer>
+        </>
     )
 }

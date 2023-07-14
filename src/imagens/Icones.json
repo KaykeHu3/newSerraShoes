@@ -1,0 +1,10 @@
+[
+    {
+        "nome": "login",
+        "src" : "../../imagens/user.svg"
+    },
+    {
+        "nome": "carrinho",
+        "src" : "../../imagens/sacola.svg"
+    }
+]
