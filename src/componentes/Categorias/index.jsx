@@ -13,15 +13,12 @@ const Cat = styled.li`
     font-weight: bold;
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    background: #0658b6;
+    background-color: #19187e;
     color: #FFF;
-    transition: 0.1s;
+    transition-duration: 500ms;
 
-    
-    &:active {
-        background: #063172;
-        
-       
+    &:hover {
+        background-color: #0e0d4d;
     }
 `
 
