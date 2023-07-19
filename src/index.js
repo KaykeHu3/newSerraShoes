@@ -4,6 +4,7 @@ import App from './App';
 import Home from './routes/Home';
 import Login from './routes/Login';
 import Cadastro from './routes/Cadastro';
+import PaginaRestrita from './routes/PaginaRestrita';
 import ErrorPage from './routes/ErrorPage';
 import {createGlobalStyle} from 'styled-components'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
@@ -23,8 +24,12 @@ const rotas = createBrowserRouter([
         element: <Login />
       },
       {
-        path:"login/cadastro",
+        path:"cadastro",
         element: <Cadastro />
+      },
+      {
+        path:"adm",
+        element: <PaginaRestrita />
       }
     ]
   }

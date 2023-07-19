@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 const Input = styled.input`
     background: transparent;
-    border: 2px solid #FFF;
+    border: 2px solid #5c5c5c;
     border-radius: 50px;
-    color: #FFF;
+    color: #000;
     width: 375px;
     height: 40px;
     padding-left: 20px;
     
     &::placeholder {
-        color: #FFF;
+        color: #5c5c5c;
         font-size: 16px;    
     }
 

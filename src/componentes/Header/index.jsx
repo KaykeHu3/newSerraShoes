@@ -4,10 +4,11 @@ import IconesHeader from '../IconesHeader'
 import Pesquisa from '../Pesquisa'
 
 const HeaderContainer = styled.header`
-    background-color: #19187e;
+    background-color: #e1e1e1;
     display: flex;
     justify-content: center;
     padding: 15px 0;
+    box-shadow: 0 2px 100px 0 rgba(0, 0, 0, 0.2);
 `
 
 export default function Header () {

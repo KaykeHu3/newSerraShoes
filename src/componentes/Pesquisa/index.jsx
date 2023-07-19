@@ -4,7 +4,8 @@ import Input from '../Input'
 
 const PesquisaContainer = styled.section`
     text-align: center;
-    color: #FFF;
+    color: transparent;
+    background-color: transparent;
     display: flex;
     align-items: center;
     margin: 0 30px;

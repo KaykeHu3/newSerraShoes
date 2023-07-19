@@ -2,6 +2,7 @@ import sacola from '../../imagens/sacola.svg'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import BotaoContainer from '../ButtonSingInUp'
+import restrictPage from '../../imagens/restrito.svg';
 
 const Icones = styled.ul`
     display: flex;
@@ -20,6 +21,9 @@ const Icone = styled.li`
 export default function IconesHeader() {
     return(
         <Icones>
+             <Icone>
+                <Link to={"adm"}><img src={restrictPage} alt='Icone Engranagem'/></Link>
+            </Icone>
             <Icone>
                 <Link><img src={sacola} alt='Icone Sacola'/></Link>
             </Icone>
