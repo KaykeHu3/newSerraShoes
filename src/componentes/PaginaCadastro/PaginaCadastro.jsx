@@ -2,8 +2,10 @@ import { useState } from 'react';
 import "./styles.css";
 
 function PaginaCadastro () {
+    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [comfirmPassword, setComfirmPassword] = useState("")
     return(
         <div className='container'>
             <div className='container-register'>
@@ -19,10 +21,10 @@ function PaginaCadastro () {
                         </span>
                         <div className='wrap-input'>
                             <input 
-                                className={email !== "" ? 'has-val input' : 'input'}
-                                type='email' 
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
+                                className={name !== "" ? 'has-val input' : 'input'}
+                                type='name' 
+                                value={name}
+                                onChange={e => setName(e.target.value)}
                             />
                             <span className='focus-input' data-placeholder='Nome Completo'></span>
                         </div>
@@ -55,10 +57,10 @@ function PaginaCadastro () {
 
                         <div className='wrap-input'>
                             <input
-                                className={password !== "" ? 'has-val input' : 'input'}
+                                className={comfirmPassword !== "" ? 'has-val input' : 'input'}
                                 type='password' 
-                                value={password}
-                                onChange={e => setPassword(e.target.value)}
+                                value={comfirmPassword}
+                                onChange={e => setComfirmPassword(e.target.value)}
                             />
                             <span className='focus-input' data-placeholder='Confirmar Senha'></span>
                         </div>
