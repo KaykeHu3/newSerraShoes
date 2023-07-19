@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const BotaoContainer = styled.p`
     text-decoration: none;
-    background: #d6341e;
+    background-color: #020488;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -12,9 +12,11 @@ const BotaoContainer = styled.p`
     outline: none;
     cursor: pointer;
     transition: 50ms;
+    
+    
 
     &:active {
-        background-color: #751d12;
+        opacity:0.6;
         color: #c5c5c5;
     }
 `

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const LogoContainer = styled.p`
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 36px;
     position: absolute;
     left: 40px;
