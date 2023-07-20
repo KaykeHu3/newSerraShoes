@@ -4,7 +4,9 @@ import IconesHeader from '../IconesHeader'
 import Pesquisa from '../Pesquisa'
 
 const HeaderContainer = styled.header`
+
     background-color: #e1e1e1;
+    background: linear-gradient(to left, #2644ce, #19187e);
     display: flex;
     justify-content: center;
     padding: 15px 0;

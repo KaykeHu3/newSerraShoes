@@ -42,7 +42,7 @@ const Grade = styled.div`
 const Preco = styled.span`
     font-weight: bold;
     font-size: 18px;
-    background-image: linear-gradient(to right, #001a3f, #000);
+    background-image: linear-gradient(to right, #2644ce, #19187e);
     color: white;
     border-radius: 12px;
     padding: 5px 0;

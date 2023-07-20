@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Input = styled.input`
     background: transparent;
-    border: 2px solid #5c5c5c;
+    border: 2px solid #e1e1e1;
     border-radius: 50px;
     color: #000;
     width: 375px;
@@ -10,7 +10,7 @@ const Input = styled.input`
     padding-left: 20px;
     
     &::placeholder {
-        color: #5c5c5c;
+        color: #e1e1e1;
         font-size: 16px;    
     }
 
