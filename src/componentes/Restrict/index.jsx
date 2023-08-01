@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import AddIcon from '../../imagens/add.svg';
+import {Link} from "react-router-dom";
 
 const CadastroContainer = styled.div`
     display: flex;
@@ -43,7 +44,7 @@ export default function CadastroProduto () {
         <CadastroContainer>
             <ContainerTop>
                 <TituloCadastro>Cadastre seus Produtos</TituloCadastro>
-                <AddImg src={AddIcon} />
+                <Link to={"/produtoscadastro"}><AddImg src={AddIcon} /></Link>
             </ContainerTop>
             <ProdutosContainer>
                 <h1>Produto</h1>

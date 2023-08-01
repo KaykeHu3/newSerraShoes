@@ -1,4 +1,4 @@
-import LoginNovo from "../componentes/LoginNovo";
+import LoginNovo from "../../componentes/LoginNovo";
 
 
 export default function Login () {

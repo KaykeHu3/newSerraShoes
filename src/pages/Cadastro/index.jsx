@@ -1,4 +1,4 @@
-import PaginaCadastro from "../componentes/PaginaCadastro"
+import PaginaCadastro from "../../componentes/PaginaCadastro"
 
 export default function Cadastro () {
     return(

@@ -1,9 +1,32 @@
 import { useState } from 'react';
 import "./styles.css";
+import useAuth from '../../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 function LoginNovo () {
+    const {signin} = useAuth();
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [error, setError] = useState("")
+
+    const handleLogin = () => {
+        if(!email | !password) {
+            setError("Preencha todos os campos");
+            return;
+        }
+
+        const res = signin(email, password);
+
+        if(res) {
+            setError(res);
+            return;
+        }
+
+        navigate("/");
+    }
+
     return(
         <div className='container'>
             <div className='container-login'>
@@ -22,7 +45,7 @@ function LoginNovo () {
                                 className={email !== "" ? 'has-val input' : 'input'}
                                 type='email' 
                                 value={email}
-                                onChange={e => setEmail(e.target.value)}
+                                onChange={e => [setEmail(e.target.value), setError("")]}
                             />
                             <span className='focus-input' data-placeholder='Email'></span>
                         </div>
@@ -31,15 +54,16 @@ function LoginNovo () {
                                 className={password !== "" ? 'has-val input' : 'input'}
                                 type='password' 
                                 value={password}
-                                onChange={e => setPassword(e.target.value)}
+                                onChange={e => [setPassword(e.target.value), setError("")]}
                             />
                             <span className='focus-input' data-placeholder='Password'></span>
                         </div>
+                        <label>{error}</label>
                         <div>
                         <span className='txt3'>Esqueceu sua senha ?</span>
                         </div>
                         <div className='container-login-form-btn'>
-                            <button className='login-form-btn'>Login</button>
+                            <button className='login-form-btn' onClick={handleLogin}>Login</button>
                         </div>
                         <div className='text-center'>
                             <span className='txt1'>Não possui conta?</span>

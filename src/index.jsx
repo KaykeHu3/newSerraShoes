@@ -1,39 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import Home from './routes/Home';
-import Login from './routes/Login';
-import Cadastro from './routes/Cadastro';
-import PaginaRestrita from './routes/PaginaRestrita';
-import ErrorPage from './routes/ErrorPage';
+// import App from './App';
+// import Home from './pages/Home';
+// import Login from './pages/Login';
+// import Cadastro from './pages/Cadastro';
+// import PaginaRestrita from './pages/PaginaRestrita';
+// import ErrorPage from './pages/ErrorPage';
 import {createGlobalStyle} from 'styled-components'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+// import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import RoutesApp from './routes';
+import { AuthProvider } from './contexts/auths';
 
-const rotas = createBrowserRouter([
-  {
-    path: "",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children:[
-      {
-        path:"/",
-        element: <Home />
-      },
-      {
-        path:"login",
-        element: <Login />
-      },
-      {
-        path:"cadastro",
-        element: <Cadastro />
-      },
-      {
-        path:"adm",
-        element: <PaginaRestrita />
-      }
-    ]
-  }
-])
+// const rotas = createBrowserRouter([
+//   {
+//     path: "",
+//     element: <App />,
+//     errorElement: <ErrorPage />,
+//     children:[
+//       {
+//         path:"/",
+//         element: <Home />
+//       },
+//       {
+//         path:"login",
+//         element: <Login />
+//       },
+//       {
+//         path:"cadastro",
+//         element: <Cadastro />
+//       },
+//       {
+//         path:"adm",
+//         element: <PaginaRestrita />
+//       }
+//     ]
+//   }
+// ])
 
 
 const GlobalStyle = createGlobalStyle`
@@ -67,7 +69,10 @@ const GlobalStyle = createGlobalStyle`
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <RouterProvider router={rotas}/>
+    <AuthProvider>
+      <RoutesApp />
+      <GlobalStyle />
+      {/* <RouterProvider router={rotas}/> */}
+    </AuthProvider>
   </React.StrictMode>
 );
