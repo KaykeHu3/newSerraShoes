@@ -15,6 +15,6 @@ const Strong = styled.strong`
 
 export default function Logo () {
     return(
-        <Link to="/"><LogoContainer><Strong>KG</Strong>Calçados</LogoContainer></Link>
+        <Link to="/"><LogoContainer><Strong>NewSerra</Strong>Calçados</LogoContainer></Link>
     )
 }
